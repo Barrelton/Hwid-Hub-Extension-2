@@ -1,0 +1,85 @@
+-- Library
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Window = Rayfield:CreateWindow({
+   Name = "Hwid Extension - Project lazarus",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "Hwid Extension 2",
+   LoadingSubtitle = "mostly only paid execs (sorry)",
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Hwid Hub Project Lazarus extension"
+   }
+})
+
+
+-- Tab Creation
+
+local Tab = Window:CreateTab("|Main|", 0)
+local Misc = Window:CreateTab("|Others|", 0)
+
+
+-- Buttons (yes i organize my code and not anything IRL)
+
+local Button1 = Tab:CreateButton({
+   Name = "Gun mods",
+   Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/pEJgiiW0"))()
+   end,
+})
+
+local Button2 = Tab:CreateButton({
+    Name = "Auto farm points (DETECTED DONT USE)",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/such/main/thefunni'))()
+    end,
+})
+
+local Button3 = Tab:CreateButton({
+    Name = "Auto mystery box",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/MCKZayNV"))()
+    end,
+})
+
+local Button4 = Tab:CreateButton({
+    Name = "Damage multiplier (for closet cheating)",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/yeerma/such/main/diggabrown'))()
+    end,
+})
+
+local Button5 = Tab:CreateButton({
+    Name = "Kill all zombies",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/Ffnrdfzx"))()
+    end,
+})
+
+local Button6 = Tab:CreateButton({
+    Name = "mostly detected gui",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/AmdBs5Bc", true))()
+    end,
+})
+
+local Button7 = Misc:CreateButton({
+    Name = "Legacy Hwid Hub",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Barrelton/Hwid-Hub/refs/heads/main/Hwid%20Hub"))()
+    end,
+})
+
+-- Printing output
+print("2 2 2 ")
+print("   2  ")
+print("  2   ")
+print("2 2 2")
+print("      ")
+wait(0.5)
+print("Collection made by HWID also known as Barrelton")
