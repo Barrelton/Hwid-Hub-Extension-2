@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Hwid Extension - Project lazarus",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Hwid Extension #2",
-   LoadingSubtitle = "mostly only paid execs (supports Atlantis)",
+   LoadingTitle = "Hwid Extension 2",
+   LoadingSubtitle = "Fully supports only paid execs, however, free execs like Atlantis work fine.",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -69,16 +69,22 @@ local Button6 = Tab:CreateButton({
     end,
 })
 
-
 local Button7 = Misc:CreateButton({
+    Name = "Hwid Hub V2",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/v7mPcAA7"))()
+    end,
+})
+
+local Button8 = Misc:CreateButton({
     Name = "Legacy Hwid Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Barrelton/Hwid-Hub/refs/heads/main/Hwid%20Hub"))()
     end,
 })
 
-local Button8 = Misc:CreateButton({
-    Name = "Dark Hub (LAGGY ON SELIWARE BUT *FULLY* UNDETECTED)",
+local Button9 = Misc:CreateButton({
+    Name = "Dark Hub (LESS SUPPORT ON EXECS BUT *FULLY* UNDETECTED)",
     Callback = function()
     getgenv().gethui = function()
         return game:GetService("CoreGui")
@@ -140,7 +146,7 @@ elseif identifyexecutor() == "Selene" then
     })
 elseif identifyexecutor() == "SirHurt" then
     Rayfield:Notify({
-        Title = "Your executor is supported!", 
+        Title = "Your executor is mostly supported!", 
         Content = "Your executor is supported", 
         Duration = 6.5,
         Image = 0, 
@@ -148,11 +154,16 @@ elseif identifyexecutor() == "SirHurt" then
 
 elseif identifyexecutor() == "Atlantis" then
     Rayfield:Notify({
-        Title = "Your executor is supported!",
+        Title = "Your executor is mostly supported!",
         Content = "Your executor is supported!",
         Duration = 6.5,
         Image = 0,
     })
+
+elseif identifyexecutor() == "Swift" then
+	Rayfield:Notify({
+	Title = "Your executor is mostly supported!",
+	Content = "Your executor is supported, however, I suggest switching to Atlantis!"
 
     else 
     Rayfield:Notify({
