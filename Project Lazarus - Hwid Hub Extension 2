@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Hwid Extension - Project lazarus",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Hwid Extension 2",
-   LoadingSubtitle = "mostly only paid execs (sorry)",
+   LoadingTitle = "Hwid Extension #2",
+   LoadingSubtitle = "mostly only paid execs (supports Atlantis)",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -86,6 +86,9 @@ local Button8 = Misc:CreateButton({
 local Button9 = Misc:CreateButton({
     Name = "Dark Hub (LAGGY ON SELIWARE BUT *FULLY* UNDETECTED)",
     Callback = function()
+    getgenv().gethui = function()
+        return game:GetService("CoreGui")
+    end
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartModBoy/script2/main/projectzombie", true))()
     end,
 })
@@ -141,7 +144,7 @@ elseif identifyexecutor() == "Selene" then
         Duration = 6.5,
         Image = 0, 
     })
-elseif identifyexecutor() == "Sirhurt" then
+elseif identifyexecutor() == "SirHurt" then
     Rayfield:Notify({
         Title = "Your executor is supported!", 
         Content = "Your executor is supported", 
