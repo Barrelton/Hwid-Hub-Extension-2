@@ -21,12 +21,13 @@ local Window = Rayfield:CreateWindow({
 -- Tab Creation
 
 local Tab = Window:CreateTab("|Main|", 0)
+local MiscReal = Window:CreateTab("|Gun mods|")
 local Misc = Window:CreateTab("|Others|", 0)
 
 
 -- Buttons (yes i organize my code and not anything IRL)
 
-local Button1 = Tab:CreateButton({
+local Button1 = MiscReal:CreateButton({
    Name = "Gun mods",
    Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/pEJgiiW0"))()
@@ -41,7 +42,7 @@ local Button2 = Tab:CreateButton({
 })
 
 local Button3 = Tab:CreateButton({
-    Name = "Auto mystery box",
+    Name = "Auto mystery box (BAD IT JUST SPAMS F)",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/MCKZayNV"))()
     end,
@@ -55,7 +56,7 @@ local Button4 = Tab:CreateButton({
 })
 
 local Button5 = Tab:CreateButton({
-    Name = "Kill all zombies",
+    Name = "Kill all zombies (DETECTED AFTER LIKE 5 SECONDS)",
     Callback = function()
         loadstring(game:HttpGet("https://pastebin.com/raw/Ffnrdfzx"))()
     end,
@@ -69,11 +70,102 @@ local Button6 = Tab:CreateButton({
 })
 
 local Button7 = Misc:CreateButton({
+    Name = "Hwid Hub V2",
+    Callback = function()
+        loadstring(game:HttpGet("https://pastebin.com/raw/v7mPcAA7"))()
+    end,
+})
+
+local Button8 = Misc:CreateButton({
     Name = "Legacy Hwid Hub",
     Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Barrelton/Hwid-Hub/refs/heads/main/Hwid%20Hub"))()
     end,
 })
+
+local Button9 = Misc:CreateButton({
+    Name = "Dark Hub (LAGGY ON SELIWARE BUT *FULLY* UNDETECTED)",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SmartModBoy/script2/main/projectzombie", true))()
+    end,
+})
+
+-- identify if the executor is supported or not
+
+if identifyexecutor() == "AWP" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported also btw W AWP USER!!!", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Wave" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported, consider switching to AWP though", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Seliware" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Nihon" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Synapse Z" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Atlantis" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported, crash count totally not 9999", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Selene" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported, crash count totally not 9999", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Sirhurt" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+
+elseif identifyexecutor() == "Atlantis" then
+    Rayfield:Notify({
+        Title = "Your executor is supported!",
+        Content = "Your executor is supported!",
+        Duration = 6.5,
+        Image = 0,
+    })
+
+    else 
+    Rayfield:Notify({
+        Title = "Your executor is NOT supported!", 
+        Content = "Your executor is NOT supported (if you're using a paid exec this was likely an error)", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+end
+
 
 -- Printing output
 print("2 2 2 ")
