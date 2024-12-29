@@ -160,6 +160,14 @@ elseif identifyexecutor() == "Atlantis" then
         Image = 0,
     })
 
+elseif identifyexecutor() == "Norflex" then
+   Rayfield:Notify({
+        Title = "Your executor is mostly supported!",
+        Content = "Your executor is (mostly) supported!",
+        Duration = 6.5,
+        Image = 0,
+    })
+
 elseif identifyexecutor() == "Swift" then
     Rayfield:Notify({
         Title = "Your executor is mostly supported!",
