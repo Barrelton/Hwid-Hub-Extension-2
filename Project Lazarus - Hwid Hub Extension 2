@@ -173,7 +173,14 @@ elseif identifyexecutor() == "Swift" then
         Title = "Your executor is mostly supported!",
         Content = "Your executor is supported, however, I suggest switching to Atlantis!"
     })
-else 
+elseif identifyexecutor() == "Sonar" then
+   Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported!", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+else
     Rayfield:Notify({
         Title = "Your executor is NOT supported!", 
         Content = "Your executor is NOT supported (if you're using a paid exec this was likely an error)", 
