@@ -171,7 +171,7 @@ elseif identifyexecutor() == "Norflex" then
 elseif identifyexecutor() == "Swift" then
     Rayfield:Notify({
         Title = "Your executor is mostly supported!",
-        Content = "Your executor is supported, however, I suggest switching to Atlantis!"
+        Content = "Your executor is supported."
     })
 elseif identifyexecutor() == "Sonar" then
    Rayfield:Notify({
@@ -180,13 +180,36 @@ elseif identifyexecutor() == "Sonar" then
         Duration = 6.5,
         Image = 0, 
     })
-else
-    Rayfield:Notify({
-        Title = "Your executor is NOT supported!", 
-        Content = "Your executor is NOT supported (if you're using a paid exec this was likely an error)", 
+elseif identifyexecutor() == "Velocity" then
+   Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported!", 
         Duration = 6.5,
         Image = 0, 
     })
+elseif identifyexecutor() == "Zenith" then
+   Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported!", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+elseif identifyexecutor() == "Cryptic" then
+   Rayfield:Notify({
+        Title = "Your executor is supported!", 
+        Content = "Your executor is supported!", 
+        Duration = 6.5,
+        Image = 0, 
+    })
+else
+   if not getnamecallmethod then
+       Rayfield:Notify({
+           Title = "Your executor is NOT supported!", 
+           Content = "Your executor is NOT supported (if you're using a paid exec this was likely an error)", 
+           Duration = 6.5,
+           Image = 0, 
+       })
+   end
 end
 
 
