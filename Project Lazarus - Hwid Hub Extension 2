@@ -201,8 +201,7 @@ elseif identifyexecutor() == "Cryptic" then
         Duration = 6.5,
         Image = 0, 
     })
-else
-   if not getnamecallmethod then
+elseif not getnamecallmethod then
        Rayfield:Notify({
            Title = "Your executor is NOT supported!", 
            Content = "Your executor is NOT supported (if you're using a paid exec this was likely an error)", 
